@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* gradasi biru-hitam */
+      background: linear-gradient(135deg, #000000, #1a1a2e, #ffffff); /* hitam - biru - putih */
       margin: 0;
       padding: 0;
       text-align: center;
@@ -33,28 +33,30 @@
       gap: 20px;
     }
     .card {
-      background: #1c1c1c;
+      background: #ffffff;
       width: 280px;
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
       text-align: center;
       transition: transform 0.2s, box-shadow 0.2s;
+      color: #000;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
     .card h2 {
       color: #1e90ff;
     }
     .price {
       font-size: 24px;
-      color: #00ffcc;
+      color: #000000;
       margin: 10px 0;
+      font-weight: bold;
     }
     .desc {
-      color: #ccc;
+      color: #333;
       margin: 10px 0 20px;
     }
     .wa-btn {
