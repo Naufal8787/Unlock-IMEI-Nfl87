@@ -1,1 +1,127 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paket Jasa Unblock IMEI — Toko Anda</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --accent:#2b9bff;
+      --accent-2:#0ea5ff;
+      --muted:#bfc6cf;
+      --success:#2ecc71;
+      font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto;
+    }
+    body{
+      margin:0;
+      background:#0b0b0d;
+      color:#fff;
+    }
+    .container{max-width:960px;margin:20px auto;padding:20px;}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+    .logo{font-weight:800;font-size:20px;color:var(--accent);}
+    .card{background:#121216;border-radius:20px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,0.6);margin-bottom:40px;}
+    .price{text-align:center;}
+    .striked{text-decoration:line-through;color:var(--muted);}
+    .big-price{font-size:44px;font-weight:800;margin-top:8px;}
+    .benefits{margin:20px 0;}
+    .benefit{margin:8px 0;display:flex;align-items:center;gap:8px;}
+    .check{color:var(--success);}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021025;
+      font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none;}
+    /* Form */
+    .order-form{background:#121216;border-radius:20px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
+    .order-form h2{text-align:center;margin-bottom:20px;}
+    form{display:flex;flex-direction:column;gap:14px;}
+    input,select{padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.05);color:#fff;}
+    button{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021025;font-weight:700;padding:14px;border:none;border-radius:10px;cursor:pointer;}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">Core Store IMEI</div>
+      <div style="color:var(--muted)">☰</div>
+    </header>
+
+    <!-- Kartu Promo -->
+    <section class="card">
+      <h1 style="text-align:center">Paket Jasa Unblock IMEI</h1>
+      <div class="price">
+        <div class="striked">DARI Rp400.000</div>
+        <div class="big-price">Rp220.000</div>
+      </div>
+      <div class="benefits">
+        <div class="benefit"><span class="check">✔</span>Pembayaran bisa DP</div>
+        <div class="benefit"><span class="check">✔</span>Bergaransi selama full 3 bulan</div>
+        <div class="benefit"><span class="check">✔</span>All operator (bisa pakai semua kartu)</div>
+        <div class="benefit"><span class="check">✔</span>Proses cepat dan amanah</div>
+        <div class="benefit"><span class="check">✔</span>Garansi uang kembali jika gagal</div>
+      </div>
+      <div style="text-align:center">
+        <a class="btn" id="wa-now" target="_blank">Hubungi Sekarang</a>
+      </div>
+    </section>
+
+    <!-- Form Order -->
+    <section class="order-form">
+      <h2>Form Order</h2>
+      <form id="orderForm">
+        <input type="text" name="name" placeholder="Nama Lengkap" required>
+        <input type="tel" name="phone" placeholder="Nomor WhatsApp (62...)" required>
+        <input type="email" name="email" placeholder="Email (opsional)">
+        <select name="payment" required>
+          <option value="">Pilih Metode Pembayaran</option>
+          <option value="Transfer Bank - BCA">Transfer Bank (BCA)</option>
+          <option value="Transfer Bank - BNI">Transfer Bank (BNI)</option>
+          <option value="Transfer Bank - Mandiri">Transfer Bank (Mandiri)</option>
+          <option value="Transfer Bank - BRI">Transfer Bank (BRI)</option>
+          <option value="E-Wallet - Dana">E-Wallet (Dana)</option>
+          <option value="E-Wallet - OVO">E-Wallet (OVO)</option>
+          <option value="E-Wallet - GoPay">E-Wallet (GoPay)</option>
+          <option value="E-Wallet - ShopeePay">E-Wallet (ShopeePay)</option>
+          <option value="COD">COD</option>
+        </select>
+        <button type="submit">Kirim Order</button>
+      </form>
+    </section>
+
+  </div>
+
+<script>
+  // Ganti dengan nomor admin Anda
+  const waAdmin = "62812xxxxxxxx";
+
+  document.getElementById("wa-now").href =
+    `https://wa.me/${waAdmin}?text=Halo%20Admin,%20saya%20ingin%20pesan%20Unblock%20IMEI%203%20bulan.`;
+
+  document.getElementById("orderForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = this.name.value;
+    const phone = this.phone.value;
+    const email = this.email.value;
+    const payment = this.payment.value;
+
+    // WhatsApp Redirect
+    const waText = `Halo Admin, saya mau pesan Unblock IMEI 3 Bulan.%0A
+Nama: ${name}%0A
+No. WA: ${phone}%0A
+Email: ${email}%0A
+Metode Bayar: ${payment}`;
+    window.open(`https://wa.me/${waAdmin}?text=${waText}`, "_blank");
+
+    // Kirim ke Email via Formspree
+    fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ name, phone, email, payment })
+    }).then(r => alert("Order berhasil dikirim! Admin akan segera menghubungi Anda."));
+  });
+</script>
+</body>
+</html>
