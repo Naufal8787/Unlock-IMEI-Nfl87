@@ -3,95 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unlock IMEI Nfl87</title>
+  <title>NFL87 Store - Top Up Game Otomatis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      background-color: #0b0b18;
+      font-family: 'Poppins', sans-serif;
+      color: white;
       margin: 0;
       padding: 0;
+    }
+    h1 {
+      color: #8b5cf6;
       text-align: center;
-      background: #f5f5dc; /* cream lembut */
-      color: #333;
-    }
-    header {
-      background: #0077b6; /* biru laut */
-      color: #fff;
-      padding: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    header h1 { margin: 0; }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 40px auto;
-      gap: 20px;
-    }
-    .card {
-      background: #ffffff;
-      width: 280px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      color: #000;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-    }
-    .card h2 { color: #0077b6; }
-    .price { font-size: 24px; font-weight: bold; color: #27ae60; }
-    .wa-btn {
-      background: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-    .wa-btn:hover {
-      background: #1ebe5b;
-      box-shadow: 0 0 12px rgba(37, 211, 102, 0.8);
-    }
-    footer {
       margin-top: 40px;
-      padding: 20px;
-      background: #0077b6; /* biru laut sama dengan header */
-      color: #fff;
-      font-size: 14px;
+      text-shadow: 0 0 10px #8b5cf6;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #141428;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1c1c30;
+      color: white;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #8b5cf6;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #a78bfa;
+      box-shadow: 0 0 20px #8b5cf6;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📱 Jasa Unlock IMEI Nfl87 📱</h1>
-    <p>Solusi cepat & aman untuk iPhone Ex Inter</p>
-  </header>
-
+  <h1>Top Up Game Otomatis</h1>
   <div class="container">
-    <!-- Paket Standard -->
-    <div class="card">
-      <h2>Paket Standard</h2>
-      <p class="price">Rp 350.000</p>
-      <p>Estimasi 1-2 hari</p>
-      <a class="wa-btn" href="https://wa.me/6285245907854?text=Halo%2C+saya+mau+pesan+Paket+Standard" target="_blank">Pesan via WhatsApp</a>
-    </div>
+    <form action="process.php" method="POST">
+      <label>Pilih Game</label>
+      <select name="game" required>
+        <option value="">-- Pilih Game --</option>
+        <option value="Mobile Legends">Mobile Legends</option>
+        <option value="Free Fire">Free Fire</option>
+        <option value="PUBG Mobile">PUBG Mobile</option>
+        <option value="Valorant">Valorant</option>
+      </select>
 
-    <!-- Paket Express -->
-    <div class="card">
-      <h2>Paket Express</h2>
-      <p class="price">Rp 400.000</p>
-      <p>Estimasi 1-6 jam</p>
-      <a class="wa-btn" href="https://wa.me/6285245907854?text=Halo%2C+saya+mau+pesan+Paket+Express" target="_blank">Pesan via WhatsApp</a>
-    </div>
+      <label>ID Player</label>
+      <input type="text" name="player_id" placeholder="Masukkan ID Player" required>
+
+      <label>Server (jika ada)</label>
+      <input type="text" name="server_id" placeholder="Masukkan Server ID (opsional)">
+
+      <label>Pilih Nominal</label>
+      <select name="nominal" required>
+        <option value="">-- Pilih Nominal --</option>
+        <option value="86 Diamonds">86 Diamonds - Rp 20.000</option>
+        <option value="170 Diamonds">170 Diamonds - Rp 40.000</option>
+        <option value="257 Diamonds">257 Diamonds - Rp 60.000</option>
+      </select>
+
+      <label>Metode Pembayaran</label>
+      <select name="payment_method" required>
+        <option value="">-- Pilih Metode --</option>
+        <option value="QRIS">QRIS</option>
+        <option value="DANA">DANA</option>
+        <option value="BCA">BCA</option>
+        <option value="GOPAY">GoPay</option>
+      </select>
+
+      <button type="submit">Bayar Sekarang</button>
+    </form>
   </div>
-
-  <footer>
-    © 2025 Unlock IMEI Nfl87 | All Rights Reserved
-  </footer>
 </body>
 </html>
+<?php
+// ========== Konfigurasi API Tripay ==========
+$apiKey       = 'ISI_API_KEY_KAMU';
+$merchantCode = 'ISI_KODE_MERCHANT_KAMU';
+$privateKey   = 'ISI_PRIVATE_KEY_KAMU';
+
+// Ambil data dari form
+$game          = $_POST['game'];
+$player_id     = $_POST['player_id'];
+$server_id     = $_POST['server_id'];
+$nominal       = $_POST['nominal'];
+$paymentMethod = $_POST['payment_method'];
+
+// Nominal harga sesuai pilihan (contoh)
+$priceList = [
+  '86 Diamonds'  => 20000,
+  '170 Diamonds' => 40000,
+  '257 Diamonds' => 60000
+];
+$amount = $priceList[$nominal] ?? 0;
+
+// Nomor invoice unik
+$merchantRef = 'NFL87-' . time();
+
+// ========== Data transaksi ==========
+$data = [
+  'method'         => $paymentMethod,
+  'merchant_ref'   => $merchantRef,
+  'amount'         => $amount,
+  'customer_name'  => $player_id,
+  'customer_email' => 'customer@nfl87store.com',
+  'customer_phone' => '08123456789',
+  'order_items'    => [
+    [
+      'sku'         => $game,
+      'name'        => "$nominal ($game)",
+      'price'       => $amount,
+      'quantity'    => 1
+    ]
+  ],
+  'callback_url'   => 'https://nfl87store.com/callback.php',
+  'return_url'     => 'https://nfl87store.com/thanks.html',
+  'expired_time'   => (time() + (24 * 60 * 60)), // 24 jam
+  'signature'      => hash_hmac('sha256', $merchantCode.$merchantRef.$amount, $privateKey)
+];
+
+// ========== Kirim ke API Tripay ==========
+$ch = curl_init();
+
+curl_setopt_array($ch, [
+  CURLOPT_FRESH_CONNECT  => true,
+  CURLOPT_URL            => "https://tripay.co.id/api/transaction/create",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HEADER         => false,
+  CURLOPT_HTTPHEADER     => ['Authorization: Bearer '.$apiKey],
+  CURLOPT_FAILONERROR    => false,
+  CURLOPT_POST           => true,
+  CURLOPT_POSTFIELDS     => http_build_query($data),
+]);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+$result = json_decode($response, true);
+
+// ========== Arahkan ke halaman pembayaran ==========
+if (isset($result['data']['checkout_url'])) {
+  header('Location: ' . $result['data']['checkout_url']);
+  exit;
+} else {
+  echo "<h2 style='color:white;background:#141428;padding:20px;text-align:center;border-radius:10px;'>
+    Gagal membuat transaksi.<br>Pesan: " . ($result['message'] ?? 'Tidak diketahui') . "
+  </h2>";
+}
+?>
