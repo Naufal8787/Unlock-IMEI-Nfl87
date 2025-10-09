@@ -1,127 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Paket Jasa Unblock IMEI — Toko Anda</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nfl87store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b0b0d;
-      --accent:#2b9bff;
-      --accent-2:#0ea5ff;
-      --muted:#bfc6cf;
-      --success:#2ecc71;
-      font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    body{
-      margin:0;
-      background:#0b0b0d;
-      color:#fff;
+    body {
+      background-color: #0b0d12;
+      color: white;
     }
-    .container{max-width:960px;margin:20px auto;padding:20px;}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
-    .logo{font-weight:800;font-size:20px;color:var(--accent);}
-    .card{background:#121216;border-radius:20px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,0.6);margin-bottom:40px;}
-    .price{text-align:center;}
-    .striked{text-decoration:line-through;color:var(--muted);}
-    .big-price{font-size:44px;font-weight:800;margin-top:8px;}
-    .benefits{margin:20px 0;}
-    .benefit{margin:8px 0;display:flex;align-items:center;gap:8px;}
-    .check{color:var(--success);}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021025;
-      font-weight:700;padding:14px 22px;border-radius:10px;text-decoration:none;}
-    /* Form */
-    .order-form{background:#121216;border-radius:20px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,0.6);}
-    .order-form h2{text-align:center;margin-bottom:20px;}
-    form{display:flex;flex-direction:column;gap:14px;}
-    input,select{padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.05);color:#fff;}
-    button{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021025;font-weight:700;padding:14px;border:none;border-radius:10px;cursor:pointer;}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: #11131a;
+      border-bottom: 2px solid #0af;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #0af;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(180deg, #0b0d12 0%, #10131c 100%);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0af;
+    }
+    .hero p {
+      margin: 10px 0 20px;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+    .hero button {
+      background: #0af;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #0077ff;
+    }
+    .games {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+    .game-card {
+      background: #11131a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .game-card:hover {
+      transform: translateY(-5px);
+      border: 1px solid #0af;
+    }
+    .game-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0b0d12;
+      color: #aaa;
+      border-top: 1px solid #0af;
+    }
+    footer a {
+      color: #0af;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png" alt="logo">
+      <h2>Nfl87store</h2>
+    </div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Daftar Game</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
 
-    <header>
-      <div class="logo">Core Store IMEI</div>
-      <div style="color:var(--muted)">☰</div>
-    </header>
+  <section class="hero">
+    <h1>Top-Up Cepat, Aman, dan 24 Jam Nonstop!</h1>
+    <p>Pilih game favoritmu dan nikmati transaksi cepat serta terpercaya.</p>
+    <button>Top-Up Sekarang</button>
+  </section>
 
-    <!-- Kartu Promo -->
-    <section class="card">
-      <h1 style="text-align:center">Paket Jasa Unblock IMEI</h1>
-      <div class="price">
-        <div class="striked">DARI Rp400.000</div>
-        <div class="big-price">Rp220.000</div>
-      </div>
-      <div class="benefits">
-        <div class="benefit"><span class="check">✔</span>Pembayaran bisa DP</div>
-        <div class="benefit"><span class="check">✔</span>Bergaransi selama full 3 bulan</div>
-        <div class="benefit"><span class="check">✔</span>All operator (bisa pakai semua kartu)</div>
-        <div class="benefit"><span class="check">✔</span>Proses cepat dan amanah</div>
-        <div class="benefit"><span class="check">✔</span>Garansi uang kembali jika gagal</div>
-      </div>
-      <div style="text-align:center">
-        <a class="btn" id="wa-now" target="_blank">Hubungi Sekarang</a>
-      </div>
-    </section>
+  <section class="games">
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Mobile_Legends_Bang_Bang_logo.png" alt="MLBB">
+      <h3>Mobile Legends</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Free_Fire_logo.png" alt="Free Fire">
+      <h3>Free Fire</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/PUBG_logo.svg" alt="PUBG Mobile">
+      <h3>PUBG Mobile</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Roblox_Logo_Black.svg" alt="Roblox">
+      <h3>Roblox</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/EA_Sports_FC_24_logo.svg" alt="FC Mobile">
+      <h3>FC Mobile</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://play-lh.googleusercontent.com/fkhgUo4i-AzhnQ1UnO3T69YGGXPOuQbA5PaYMLIuDGC2wBrrhtqCacbWlHKXv5x2nw=w240-h480" alt="Magic Chess">
+      <h3>Magic Chess</h3>
+    </div>
+  </section>
 
-    <!-- Form Order -->
-    <section class="order-form">
-      <h2>Form Order</h2>
-      <form id="orderForm">
-        <input type="text" name="name" placeholder="Nama Lengkap" required>
-        <input type="tel" name="phone" placeholder="Nomor WhatsApp (62...)" required>
-        <input type="email" name="email" placeholder="Email (opsional)">
-        <select name="payment" required>
-          <option value="">Pilih Metode Pembayaran</option>
-          <option value="Transfer Bank - BCA">Transfer Bank (BCA)</option>
-          <option value="Transfer Bank - BNI">Transfer Bank (BNI)</option>
-          <option value="Transfer Bank - Mandiri">Transfer Bank (Mandiri)</option>
-          <option value="Transfer Bank - BRI">Transfer Bank (BRI)</option>
-          <option value="E-Wallet - Dana">E-Wallet (Dana)</option>
-          <option value="E-Wallet - OVO">E-Wallet (OVO)</option>
-          <option value="E-Wallet - GoPay">E-Wallet (GoPay)</option>
-          <option value="E-Wallet - ShopeePay">E-Wallet (ShopeePay)</option>
-          <option value="COD">COD</option>
-        </select>
-        <button type="submit">Kirim Order</button>
-      </form>
-    </section>
-
-  </div>
-
-<script>
-  // Ganti dengan nomor admin Anda
-  const waAdmin = "62812xxxxxxxx";
-
-  document.getElementById("wa-now").href =
-    `https://wa.me/${waAdmin}?text=Halo%20Admin,%20saya%20ingin%20pesan%20Unblock%20IMEI%203%20bulan.`;
-
-  document.getElementById("orderForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const name = this.name.value;
-    const phone = this.phone.value;
-    const email = this.email.value;
-    const payment = this.payment.value;
-
-    // WhatsApp Redirect
-    const waText = `Halo Admin, saya mau pesan Unblock IMEI 3 Bulan.%0A
-Nama: ${name}%0A
-No. WA: ${phone}%0A
-Email: ${email}%0A
-Metode Bayar: ${payment}`;
-    window.open(`https://wa.me/${waAdmin}?text=${waText}`, "_blank");
-
-    // Kirim ke Email via Formspree
-    fetch("https://formspree.io/f/YOUR_FORM_ID", {
-      method:"POST",
-      headers:{ "Content-Type":"application/json" },
-      body: JSON.stringify({ name, phone, email, payment })
-    }).then(r => alert("Order berhasil dikirim! Admin akan segera menghubungi Anda."));
-  });
-</script>
+  <footer>
+    <p>📩 Email: <a href="#">support@nfl87store.com</a></p>
+    <p>📱 Instagram: <a href="#">@nfl87store</a></p>
+    <p>© 2025 Nfl87store. All rights reserved.</p>
+  </footer>
 </body>
 </html>
