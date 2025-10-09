@@ -1,179 +1,163 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NFL87 Store - Top Up Game Otomatis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nfl87store</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #0b0b18;
-      font-family: 'Poppins', sans-serif;
-      color: white;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
-    h1 {
-      color: #8b5cf6;
-      text-align: center;
-      margin-top: 40px;
-      text-shadow: 0 0 10px #8b5cf6;
-    }
-    .container {
-      max-width: 500px;
-      margin: 40px auto;
-      background: #141428;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-    }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 10px;
-      background-color: #1c1c30;
+    body {
+      background-color: #0b0d12;
       color: white;
-      font-size: 1rem;
     }
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #8b5cf6;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      background: #11131a;
+      border-bottom: 2px solid #0af;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
       transition: 0.3s;
     }
-    button:hover {
-      background-color: #a78bfa;
-      box-shadow: 0 0 20px #8b5cf6;
+    nav a:hover {
+      color: #0af;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(180deg, #0b0d12 0%, #10131c 100%);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0af;
+    }
+    .hero p {
+      margin: 10px 0 20px;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+    .hero button {
+      background: #0af;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #0077ff;
+    }
+    .games {
+      padding: 60px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+    .game-card {
+      background: #11131a;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .game-card:hover {
+      transform: translateY(-5px);
+      border: 1px solid #0af;
+    }
+    .game-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0b0d12;
+      color: #aaa;
+      border-top: 1px solid #0af;
+    }
+    footer a {
+      color: #0af;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Top Up Game Otomatis</h1>
-  <div class="container">
-    <form action="process.php" method="POST">
-      <label>Pilih Game</label>
-      <select name="game" required>
-        <option value="">-- Pilih Game --</option>
-        <option value="Mobile Legends">Mobile Legends</option>
-        <option value="Free Fire">Free Fire</option>
-        <option value="PUBG Mobile">PUBG Mobile</option>
-        <option value="Valorant">Valorant</option>
-      </select>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968770.png" alt="logo">
+      <h2>Nfl87store</h2>
+    </div>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Daftar Game</a>
+      <a href="#">Kontak</a>
+    </nav>
+  </header>
 
-      <label>ID Player</label>
-      <input type="text" name="player_id" placeholder="Masukkan ID Player" required>
+  <section class="hero">
+    <h1>Top-Up Cepat, Aman, dan 24 Jam Nonstop!</h1>
+    <p>Pilih game favoritmu dan nikmati transaksi cepat serta terpercaya.</p>
+    <button>Top-Up Sekarang</button>
+  </section>
 
-      <label>Server (jika ada)</label>
-      <input type="text" name="server_id" placeholder="Masukkan Server ID (opsional)">
+  <section class="games">
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Mobile_Legends_Bang_Bang_logo.png" alt="MLBB">
+      <h3>Mobile Legends</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Free_Fire_logo.png" alt="Free Fire">
+      <h3>Free Fire</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/PUBG_logo.svg" alt="PUBG Mobile">
+      <h3>PUBG Mobile</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Roblox_Logo_Black.svg" alt="Roblox">
+      <h3>Roblox</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/EA_Sports_FC_24_logo.svg" alt="FC Mobile">
+      <h3>FC Mobile</h3>
+    </div>
+    <div class="game-card">
+      <img src="https://play-lh.googleusercontent.com/fkhgUo4i-AzhnQ1UnO3T69YGGXPOuQbA5PaYMLIuDGC2wBrrhtqCacbWlHKXv5x2nw=w240-h480" alt="Magic Chess">
+      <h3>Magic Chess</h3>
+    </div>
+  </section>
 
-      <label>Pilih Nominal</label>
-      <select name="nominal" required>
-        <option value="">-- Pilih Nominal --</option>
-        <option value="86 Diamonds">86 Diamonds - Rp 20.000</option>
-        <option value="170 Diamonds">170 Diamonds - Rp 40.000</option>
-        <option value="257 Diamonds">257 Diamonds - Rp 60.000</option>
-      </select>
-
-      <label>Metode Pembayaran</label>
-      <select name="payment_method" required>
-        <option value="">-- Pilih Metode --</option>
-        <option value="QRIS">QRIS</option>
-        <option value="DANA">DANA</option>
-        <option value="BCA">BCA</option>
-        <option value="GOPAY">GoPay</option>
-      </select>
-
-      <button type="submit">Bayar Sekarang</button>
-    </form>
-  </div>
+  <footer>
+    <p>📩 Email: <a href="#">support@nfl87store.com</a></p>
+    <p>📱 Instagram: <a href="#">@nfl87store</a></p>
+    <p>© 2025 Nfl87store. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-<?php
-// ========== Konfigurasi API Tripay ==========
-$apiKey       = 'ISI_API_KEY_KAMU';
-$merchantCode = 'ISI_KODE_MERCHANT_KAMU';
-$privateKey   = 'ISI_PRIVATE_KEY_KAMU';
-
-// Ambil data dari form
-$game          = $_POST['game'];
-$player_id     = $_POST['player_id'];
-$server_id     = $_POST['server_id'];
-$nominal       = $_POST['nominal'];
-$paymentMethod = $_POST['payment_method'];
-
-// Nominal harga sesuai pilihan (contoh)
-$priceList = [
-  '86 Diamonds'  => 20000,
-  '170 Diamonds' => 40000,
-  '257 Diamonds' => 60000
-];
-$amount = $priceList[$nominal] ?? 0;
-
-// Nomor invoice unik
-$merchantRef = 'NFL87-' . time();
-
-// ========== Data transaksi ==========
-$data = [
-  'method'         => $paymentMethod,
-  'merchant_ref'   => $merchantRef,
-  'amount'         => $amount,
-  'customer_name'  => $player_id,
-  'customer_email' => 'customer@nfl87store.com',
-  'customer_phone' => '08123456789',
-  'order_items'    => [
-    [
-      'sku'         => $game,
-      'name'        => "$nominal ($game)",
-      'price'       => $amount,
-      'quantity'    => 1
-    ]
-  ],
-  'callback_url'   => 'https://nfl87store.com/callback.php',
-  'return_url'     => 'https://nfl87store.com/thanks.html',
-  'expired_time'   => (time() + (24 * 60 * 60)), // 24 jam
-  'signature'      => hash_hmac('sha256', $merchantCode.$merchantRef.$amount, $privateKey)
-];
-
-// ========== Kirim ke API Tripay ==========
-$ch = curl_init();
-
-curl_setopt_array($ch, [
-  CURLOPT_FRESH_CONNECT  => true,
-  CURLOPT_URL            => "https://tripay.co.id/api/transaction/create",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_HEADER         => false,
-  CURLOPT_HTTPHEADER     => ['Authorization: Bearer '.$apiKey],
-  CURLOPT_FAILONERROR    => false,
-  CURLOPT_POST           => true,
-  CURLOPT_POSTFIELDS     => http_build_query($data),
-]);
-
-$response = curl_exec($ch);
-curl_close($ch);
-
-$result = json_decode($response, true);
-
-// ========== Arahkan ke halaman pembayaran ==========
-if (isset($result['data']['checkout_url'])) {
-  header('Location: ' . $result['data']['checkout_url']);
-  exit;
-} else {
-  echo "<h2 style='color:white;background:#141428;padding:20px;text-align:center;border-radius:10px;'>
-    Gagal membuat transaksi.<br>Pesan: " . ($result['message'] ?? 'Tidak diketahui') . "
-  </h2>";
-}
-?>
